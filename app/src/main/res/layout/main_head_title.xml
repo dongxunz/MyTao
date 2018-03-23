@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:id="@+id/title_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:src="@mipmap/main_scan"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:text="扫一扫"
+            android:textColor="#ffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_edit_text"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#70ffffff"
+            android:layout_margin="5dp"
+            android:drawableStart="@mipmap/search"
+            android:drawablePadding="5dp"
+            android:gravity="start|center"
+            android:text="目的地/景点/酒店/门票"
+            android:visibility="visible"
+            android:textColor="#d24e4e4e"
+            android:textSize="18sp"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:id="@+id/ed_search"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="35dp"
+            android:background="#70ffffff"
+            android:layout_margin="5dp"
+            android:drawableStart="@mipmap/search"
+            android:drawablePadding="5dp"
+            android:visibility="gone"
+            android:hint="目的地/景点/酒店/门票"
+            android:singleLine="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@mipmap/news"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:text="消息"
+            android:textColor="#ffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
