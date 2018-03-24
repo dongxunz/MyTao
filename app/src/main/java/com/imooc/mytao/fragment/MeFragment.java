@@ -53,7 +53,7 @@ public class MeFragment extends Fragment {
 
         initListItem();
 
-        MeListAdapter adapter = new MeListAdapter(getActivity(), R.layout.ad_item, listData);
+        MeListAdapter adapter = new MeListAdapter(getActivity(), R.layout.list_item, listData);
 
         bt_login = getActivity().findViewById(R.id.login_btn);
 

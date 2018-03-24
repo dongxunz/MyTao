@@ -82,7 +82,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_registered:
                 startActivity(new Intent(LoginActivity.this, RegisteredActivity.class));
-                finish();
                 break;
             case R.id.bt_login:
                 if (et_username.getText().toString().equals("") | et_pwd.getText().toString().equals("")) {
