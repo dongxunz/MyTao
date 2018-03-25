@@ -228,6 +228,7 @@
         android:layout_margin="5dp"
         android:background="#64a3a3a3" />
 
+    <!--旅行PK整个界面-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -251,191 +252,215 @@
             android:src="@mipmap/find_reflesh" />
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_travel"
             android:layout_margin="10dp">
 
-            <ImageView
-                android:id="@+id/iv_find_pk1"
-                android:layout_width="150dp"
-                android:layout_height="96dp"
-                android:layout_alignParentStart="true"
-                android:src="@mipmap/find_pk1" />
-
-            <TextView
-                android:id="@+id/tv_pk1_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:text="富士山"
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv_pk1_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_pk1_name"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="2dp"
-                android:text="一座。。。山"
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv_pk1_support"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_pk1_info"
-                android:layout_marginStart="10dp"
-                android:text="支持度"
-                android:textColor="#fff"
-                android:textSize="24sp" />
-
-            <ProgressBar
-                android:id="@+id/pb_pk1"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"
-                android:layout_alignEnd="@id/iv_find_pk1"
-                android:layout_below="@id/iv_find_pk1"
-                android:max="100" />
-
+            <!--PK1的页面-->
             <RelativeLayout
-                android:id="@+id/rl_pk1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_pk1_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_pk1_image"
+                        android:layout_width="150dp"
+                        android:layout_height="96dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@mipmap/find_pk1" />
+
+                    <TextView
+                        android:id="@+id/tv_pk1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="富士山"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_pk1_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_pk1_name"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text="一座。。。山"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_pk1_support"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_pk1_info"
+                        android:layout_marginStart="10dp"
+                        android:text="支持度"
+                        android:textColor="#fff"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_pk1"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_alignEnd="@id/rl_pk1_image"
+                    android:layout_alignStart="@id/rl_pk1_image"
+                    android:layout_below="@id/rl_pk1_image"
+                    android:max="100" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pk1"
+                        android:layout_below="@id/pb_pk1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_pk1_good"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="5dp"
+                            android:src="@mipmap/hobby_red" />
+
+                        <TextView
+                            android:id="@+id/tv_pk1_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/tv_pk1_like_people"
+                            android:layout_alignTop="@+id/iv_pk1_good"
+                            android:layout_marginTop="5dp"
+                            android:text="喜欢它"
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:id="@+id/tv_pk1_like_people"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pk1_like"
+                            android:layout_toEndOf="@id/iv_pk1_good"
+                            android:text="xx人喜欢"
+                            android:textAlignment="textStart" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            <!--PK2的页面-->
+            <RelativeLayout
+                android:id="@+id/rl_pk2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/pb_pk1">
+                android:layout_alignParentEnd="true">
 
-                <ImageView
-                    android:id="@+id/iv_pk1_good"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_margin="5dp"
-                    android:src="@mipmap/hobby_red" />
+                <RelativeLayout
+                    android:id="@+id/rl_pk2_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/tv_pk1_like"
+                    <ImageView
+                        android:id="@+id/iv_pk2_image"
+                        android:layout_width="150dp"
+                        android:layout_height="96dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@mipmap/find_pk1" />
+
+                    <TextView
+                        android:id="@+id/tv_pk2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="富士山"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_pk2_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_pk2_name"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text="一座。。。山"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_pk2_support"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_pk2_info"
+                        android:layout_marginStart="10dp"
+                        android:text="支持度"
+                        android:textColor="#fff"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_pk2"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_alignStart="@id/rl_pk2_image"
+                    android:layout_alignEnd="@id/rl_pk2_image"
+                    android:layout_below="@id/rl_pk2_image"
+                    android:max="100" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_pk2_good"
+                    android:layout_alignEnd="@id/rl_pk2_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/tv_pk1_like_people"
-                    android:layout_alignTop="@+id/iv_pk1_good"
-                    android:layout_marginTop="5dp"
-                    android:text="喜欢它"
-                    android:textAlignment="textStart" />
+                    android:layout_below="@id/pb_pk2">
 
-                <TextView
-                    android:id="@+id/tv_pk1_like_people"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_pk1_like"
-                    android:layout_toEndOf="@id/iv_pk1_good"
-                    android:text="xx人喜欢"
-                    android:textAlignment="textStart" />
+                    <ImageView
+                        android:id="@+id/iv_pk2_good"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/hobby_blue" />
+
+                    <TextView
+                        android:id="@+id/tv_pk2_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/iv_pk2_good"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/iv_pk2_good"
+                        android:text="喜欢它"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:id="@+id/tv_pk2_like_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_pk2_like"
+                        android:layout_toStartOf="@+id/iv_pk2_good"
+                        android:text="xx人喜欢"
+                        android:textAlignment="textStart" />
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_travel"
-            android:layout_margin="10dp">
-
             <ImageView
-                android:id="@+id/iv_find_pk2"
-                android:layout_width="150dp"
-                android:layout_height="96dp"
-                android:layout_alignParentEnd="true"
-                android:src="@mipmap/find_pk2" />
-
-            <TextView
-                android:id="@+id/tv_pk2_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="15dp"
-                android:text="罗马斗角场"
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv_pk2_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@id/tv_pk2_name"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="2dp"
-                android:text="一座。。。山"
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv_pk2_support"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@id/tv_pk2_info"
-                android:layout_marginEnd="10dp"
-                android:text="支持度"
-                android:textColor="#fff"
-                android:textSize="24sp" />
-
-            <ProgressBar
-                android:id="@+id/pb_pk2"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"
-                android:layout_alignStart="@id/iv_find_pk2"
-                android:layout_below="@id/iv_find_pk2"
-                android:max="100" />
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@id/pb_pk2">
-
-                <ImageView
-                    android:id="@+id/iv_pk2_good"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_margin="5dp"
-                    android:src="@mipmap/hobby_blue" />
-
-                <TextView
-                    android:id="@+id/tv_pk2_like"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/iv_pk2_good"
-                    android:layout_marginTop="5dp"
-                    android:layout_toStartOf="@+id/iv_pk2_good"
-                    android:text="喜欢它"
-                    android:textAlignment="textEnd" />
-
-                <TextView
-                    android:id="@+id/tv_pk2_like_people"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_pk2_like"
-                    android:layout_toStartOf="@+id/iv_pk2_good"
-                    android:text="xx人喜欢"
-                    android:textAlignment="textEnd" />
-
-            </RelativeLayout>
-
-            <ImageView
+                android:id="@+id/iv_vs"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
-                android:layout_above="@+id/pb_pk2"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="48dp"
+                android:layout_alignBottom="@id/rl_pk2"
                 android:src="@mipmap/find_vs" />
 
         </RelativeLayout>
 
     </RelativeLayout>
-
 </RelativeLayout>
