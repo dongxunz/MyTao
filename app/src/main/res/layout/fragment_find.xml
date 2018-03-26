@@ -230,6 +230,7 @@
 
     <!--旅行PK整个界面-->
     <RelativeLayout
+        android:id="@+id/find_travel_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/find_main_second_menu"
@@ -369,15 +370,16 @@
                         android:layout_width="150dp"
                         android:layout_height="96dp"
                         android:layout_alignParentStart="true"
-                        android:src="@mipmap/find_pk1" />
+                        android:src="@mipmap/find_pk2" />
 
                     <TextView
                         android:id="@+id/tv_pk2_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+                        android:layout_alignEnd="@id/iv_pk2_image"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="15dp"
-                        android:text="富士山"
+                        android:text="罗马斗角场"
                         android:textColor="#fff" />
 
                     <TextView
@@ -385,7 +387,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tv_pk2_name"
-                        android:layout_marginStart="10dp"
+                        android:layout_alignEnd="@id/iv_pk2_image"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="2dp"
                         android:text="一座。。。山"
                         android:textColor="#fff" />
@@ -395,7 +398,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tv_pk2_info"
-                        android:layout_marginStart="10dp"
+                        android:layout_alignEnd="@id/iv_pk2_image"
+                        android:layout_marginEnd="10dp"
                         android:text="支持度"
                         android:textColor="#fff"
                         android:textSize="24sp" />
@@ -462,5 +466,35 @@
 
         </RelativeLayout>
 
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/find_travel_page"
+        android:layout_margin="5dp"
+        android:background="#64a3a3a3" />
+
+    <RelativeLayout
+        android:layout_below="@id/find_travel_page"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_headlines"
+            android:text="热门头条"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/find_list_headlines"
+            android:layout_below="@id/tv_headlines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
     </RelativeLayout>
 </RelativeLayout>

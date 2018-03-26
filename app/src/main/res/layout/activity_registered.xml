@@ -47,24 +47,47 @@
             android:id="@+id/et_registered_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/phone_code"
+            android:drawablePadding="5dp"
             android:inputType="number"
+            android:maxLength="11"
             android:hint="请输入手机号" />
 
-        <EditText
-            android:id="@+id/et_registered_pwd"
+        <LinearLayout
+            android:id="@+id/ll_et_pwd"
+            android:layout_below="@id/et_registered_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/et_registered_username"
-            android:inputType="number"
-            android:layout_marginTop="5dp"
-            android:hint="请输入验证码" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_registered_pwd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/phone_verfy"
+                android:drawablePadding="5dp"
+                android:maxLength="6"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:hint="请输入验证码" />
+
+            <Button
+                android:id="@+id/bt_obtain_verfy"
+                android:text="获取验证码"
+                android:textColor="#ef0098cb"
+                android:background="#14dedede"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/bt_registered"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/et_registered_pwd"
+            android:layout_below="@id/ll_et_pwd"
             android:text="提交" />
 
         <CheckBox
