@@ -90,25 +90,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     return;
                 }
 
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    intent.putExtra("Flag","MeFragment");
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("Flag", "MeFragment");
 
-                    if (RegisteredActivity.getCode() != 0) {
-                        if (Integer.parseInt(et_pwd.getText().toString()) == RegisteredActivity.getCode()) {
-                            Bundle bundle = new Bundle();
-                            bundle.putString("username", UserName);
-                            bundle.putInt("password", PassWord);
+                if (RegisteredActivity.getCode() != 0) {
+                    if (Integer.parseInt(et_pwd.getText().toString()) == RegisteredActivity.getCode()) {
+                        Bundle bundle = new Bundle();
+                        bundle.putString("username", UserName);
+                        bundle.putInt("password", PassWord);
 
-                            intent.putExtra("data", bundle);
+                        intent.putExtra("data", bundle);
 
-                            startActivity(intent);
-                            finish();
-                        } else{
-                            Toast.makeText(LoginActivity.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
-                        }
-                    }else {
-                        Toast.makeText(LoginActivity.this, "没有该用户，请注册~", Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(LoginActivity.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
                     }
+                } else {
+                    Toast.makeText(LoginActivity.this, "没有该用户，请注册~", Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
     }

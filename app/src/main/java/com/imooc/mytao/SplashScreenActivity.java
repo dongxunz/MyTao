@@ -13,15 +13,15 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
         setContentView(R.layout.activity_splash_screen);
 
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
+                startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
                 finish();
             }
-        },2000);
+        }, 2000);
     }
 }

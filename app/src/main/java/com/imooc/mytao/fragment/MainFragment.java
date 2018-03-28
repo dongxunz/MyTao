@@ -28,22 +28,22 @@ import com.imooc.mytao.util.DataUtil;
  * 主界面
  */
 
-public class MainFragment extends Fragment{
+public class MainFragment extends Fragment {
 
     protected ViewPager viewPager;
 
     private ImageView vp_image;
 
-    private LinearLayout ll_title_scan,ll_title_news;
+    private LinearLayout ll_title_scan, ll_title_news;
     private RecyclerView recyclerView;
 
     private EditText ed_search;
 
     private TextView tv_edit_text;
 
-    protected int[] adIcons = {R.mipmap.header_pic_ad1,R.mipmap.header_pic_ad2};
+    protected int[] adIcons = {R.mipmap.header_pic_ad1, R.mipmap.header_pic_ad2};
 
-    private int[] adIndexImage = {R.mipmap.nav_header_index_one,R.mipmap.nav_header_index_two};
+    private int[] adIndexImage = {R.mipmap.nav_header_index_one, R.mipmap.nav_header_index_two};
 
     private int[] mainMenuIcons = {
             R.mipmap.menu_airport,
@@ -70,18 +70,18 @@ public class MainFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
 
         initView();
-        
+
         setListener();
 
-        MainHeaderAdAdapter mainHeaderAdAdapter = new MainHeaderAdAdapter(getActivity(), DataUtil.getHeaderAdInfo(getActivity(),adIcons));
+        MainHeaderAdAdapter mainHeaderAdAdapter = new MainHeaderAdAdapter(getActivity(), DataUtil.getHeaderAdInfo(getActivity(), adIcons));
         viewPager.setAdapter(mainHeaderAdAdapter);
 
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),4));
-        MainMenuAdapter mainMenuAdapter = new MainMenuAdapter(getActivity(),DataUtil.getMainMenu(mainMenuIcons,mainMenuName));
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
+        MainMenuAdapter mainMenuAdapter = new MainMenuAdapter(getActivity(), DataUtil.getMainMenu(mainMenuIcons, mainMenuName));
         mainMenuAdapter.setOnItemClickListener(new MainMenuAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClick(int item) {
-                Toast.makeText(getActivity(),"您点击了"+item+"个",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "您点击了" + item + "个", Toast.LENGTH_SHORT).show();
             }
         });
         recyclerView.setAdapter(mainMenuAdapter);
@@ -128,7 +128,7 @@ public class MainFragment extends Fragment{
                 Toast.makeText(getActivity(), "扫一扫", Toast.LENGTH_SHORT).show();
             }
         });
-        
+
         ll_title_news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,9 +137,9 @@ public class MainFragment extends Fragment{
         });
 
         final Drawable drawable = getResources().getDrawable(R.mipmap.search);
-        drawable.setBounds(0,0,40,40);
-        ed_search.setCompoundDrawables(drawable,null,null,null);
-        tv_edit_text.setCompoundDrawables(drawable,null,null,null);
+        drawable.setBounds(0, 0, 40, 40);
+        ed_search.setCompoundDrawables(drawable, null, null, null);
+        tv_edit_text.setCompoundDrawables(drawable, null, null, null);
 
         ed_search.addTextChangedListener(new TextWatcher() {
             @Override
@@ -148,8 +148,8 @@ public class MainFragment extends Fragment{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (count != 0){
-                    ed_search.setCompoundDrawables(null,null,null,null);
+                if (count != 0) {
+                    ed_search.setCompoundDrawables(null, null, null, null);
                 }
             }
 

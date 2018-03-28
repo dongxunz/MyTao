@@ -32,7 +32,7 @@ public class MainHeaderAdAdapter extends PagerAdapter {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "你点击了:"+ position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "你点击了:" + position, Toast.LENGTH_SHORT).show();
             }
         });
 

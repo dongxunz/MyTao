@@ -19,8 +19,8 @@ import java.util.Random;
 
 public class RegisteredActivity extends Activity {
 
-    private Button bt_back_login,bt_registered,bt_obtain_verfy;
-    private EditText et_registered_username,et_registered_pwd;
+    private Button bt_back_login, bt_registered, bt_obtain_verfy;
+    private EditText et_registered_username, et_registered_pwd;
     private CheckBox cb_agree_protocol;
     private TextView tv_protocol;
 
@@ -53,18 +53,18 @@ public class RegisteredActivity extends Activity {
         et_registered_pwd = findViewById(R.id.et_registered_pwd);
 
         cb_agree_protocol = findViewById(R.id.cb_agree_protocol);
-        
+
         tv_protocol = findViewById(R.id.tv_protocol);
 
         bt_obtain_verfy = findViewById(R.id.bt_obtain_verfy);
 
         Drawable drawable_phone_code = getResources().getDrawable(R.mipmap.phone_code);
-        drawable_phone_code.setBounds(0,0,48,48);
-        et_registered_username.setCompoundDrawables(drawable_phone_code,null,null,null);
+        drawable_phone_code.setBounds(0, 0, 48, 48);
+        et_registered_username.setCompoundDrawables(drawable_phone_code, null, null, null);
 
         Drawable drawable_phone_verfy = getResources().getDrawable(R.mipmap.phone_verfy);
-        drawable_phone_verfy.setBounds(0,0,48,48);
-        et_registered_pwd.setCompoundDrawables(drawable_phone_verfy,null,null,null);
+        drawable_phone_verfy.setBounds(0, 0, 48, 48);
+        et_registered_pwd.setCompoundDrawables(drawable_phone_verfy, null, null, null);
 
     }
 
@@ -88,24 +88,24 @@ public class RegisteredActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                if (isCheck){
+                if (isCheck) {
                     Toast.makeText(RegisteredActivity.this, "~~你已同意xxx协议~~", Toast.LENGTH_SHORT).show();
 
-                    if (et_registered_username.getText().toString().equals("") | et_registered_pwd.getText().toString().equals("")){
+                    if (et_registered_username.getText().toString().equals("") | et_registered_pwd.getText().toString().equals("")) {
                         Toast.makeText(RegisteredActivity.this, "请输入手机号和验证码", Toast.LENGTH_SHORT).show();
                         return;
                     }
 
-                    Intent intent = new Intent(RegisteredActivity.this,LoginActivity.class);
+                    Intent intent = new Intent(RegisteredActivity.this, LoginActivity.class);
 
                     Bundle bundle = new Bundle();
-                    bundle.putString("username",et_registered_username.getText().toString());
-                    bundle.putInt("password",code);
+                    bundle.putString("username", et_registered_username.getText().toString());
+                    bundle.putInt("password", code);
                     intent.putExtras(bundle);
 
                     startActivity(intent);
                     finish();
-                }else {
+                } else {
                     Toast.makeText(RegisteredActivity.this, "请先阅读xxx协议", Toast.LENGTH_SHORT).show();
                 }
 
@@ -178,7 +178,7 @@ public class RegisteredActivity extends Activity {
         });
     }
 
-    public static int getCode(){
+    public static int getCode() {
         return code;
     }
 }

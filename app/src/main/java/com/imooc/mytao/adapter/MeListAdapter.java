@@ -28,7 +28,7 @@ public class MeListAdapter extends ArrayAdapter {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         MeListItem item = (MeListItem) getItem(position);
 
-        View view = LayoutInflater.from(getContext()).inflate(resource,null);
+        View view = LayoutInflater.from(getContext()).inflate(resource, null);
         ImageView adImage = view.findViewById(R.id.image_id);
         TextView adText = view.findViewById(R.id.text_id);
 

@@ -15,7 +15,7 @@ public class DataUtil {
      * @param icons
      * @return AdImageData
      */
-    public static List<ImageView> getHeaderAdInfo(Context context, int[] icons){
+    public static List<ImageView> getHeaderAdInfo(Context context, int[] icons) {
         List<ImageView> data = new ArrayList<>();
         for (int i = 0; i < icons.length; i++) {
             ImageView icon = new ImageView(context);
@@ -26,11 +26,11 @@ public class DataUtil {
         return data;
     }
 
-    public static List<Menu> getMainMenu(int icons[],String name[]){
+    public static List<Menu> getMainMenu(int icons[], String name[]) {
         List<Menu> menus = new ArrayList<>();
 
         for (int i = 0; i < icons.length; i++) {
-            Menu menu = new Menu(icons[i],name[i]);
+            Menu menu = new Menu(icons[i], name[i]);
             menus.add(menu);
         }
         return menus;

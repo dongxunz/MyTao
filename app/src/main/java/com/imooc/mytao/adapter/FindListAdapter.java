@@ -15,7 +15,7 @@ import com.imooc.mytao.objects.FindListItem;
 
 import java.util.List;
 
-public class FindListAdapter extends ArrayAdapter{
+public class FindListAdapter extends ArrayAdapter {
 
     private int resourceId;
 
@@ -29,7 +29,7 @@ public class FindListAdapter extends ArrayAdapter{
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         FindListItem findListItem = (FindListItem) getItem(position);
 
-        View view = LayoutInflater.from(getContext()).inflate(resourceId,null);
+        View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
 
         TextView tv_title = view.findViewById(R.id.tv_title);
         ImageView iv_image = view.findViewById(R.id.iv_image);

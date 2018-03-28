@@ -30,7 +30,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewholder> {
 
     @Override
     public MainMenuViewholder onCreateViewHolder(ViewGroup parent, int viewType) {
-        mainMenuViewholder =  new MainMenuViewholder(LayoutInflater.from(context).inflate(R.layout.main_menu_item,null));
+        mainMenuViewholder = new MainMenuViewholder(LayoutInflater.from(context).inflate(R.layout.main_menu_item, null));
 
         return mainMenuViewholder;
     }
@@ -39,7 +39,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewholder> {
     public void onBindViewHolder(MainMenuViewholder holder, final int position) {
         Menu menu = menu_data.get(position);
 
-        if (mOnRecyclerViewItemClickListener != null){
+        if (mOnRecyclerViewItemClickListener != null) {
             mainMenuViewholder.ll_main_menu_item.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -58,8 +58,8 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewholder> {
         return menu_data != null ? menu_data.size() : 0;
     }
 
-    public void setOnItemClickListener(OnRecyclerViewItemClickListener onItemClickListener ){
-        this. mOnRecyclerViewItemClickListener=onItemClickListener;
+    public void setOnItemClickListener(OnRecyclerViewItemClickListener onItemClickListener) {
+        this.mOnRecyclerViewItemClickListener = onItemClickListener;
     }
 
     public interface OnRecyclerViewItemClickListener {

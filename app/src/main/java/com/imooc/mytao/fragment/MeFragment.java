@@ -35,7 +35,7 @@ public class MeFragment extends Fragment {
     private TextView tv_username;
     private ListView me_list;
 
-    private LinearLayout ll_me_go,ll_me_yh,ll_me_scj;
+    private LinearLayout ll_me_go, ll_me_yh, ll_me_scj;
 
     private List<MeListItem> listData = new ArrayList<>();
 
@@ -105,7 +105,7 @@ public class MeFragment extends Fragment {
         ll_me_scj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"收藏夹",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "收藏夹", Toast.LENGTH_SHORT).show();
             }
         });
     }
