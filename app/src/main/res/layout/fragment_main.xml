@@ -125,7 +125,211 @@
                 android:layout_margin="2dp"
                 android:background="#64a3a3a3" />
 
+            <LinearLayout
+                android:id="@+id/main_hot_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_secondary_menu"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@mipmap/main_hot_news" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:text="热点热点热点热点热点热点热点热点热点热点热点热点热点热点"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_main_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_hot_title"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="149dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="216dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/main_spread1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="149dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/main_spread2" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/main_spread3" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="465dp"
+                        android:layout_height="120dp"
+                        android:src="@mipmap/main_spread4" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_main_travel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_main_hot"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/main_travle_online" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="旅行直播" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_main_travel"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="212dp"
+                        android:layout_height="149dp"
+                        android:src="@mipmap/main_travle_online_pic" />
+
+                    <TextView
+                        android:id="@+id/tv_travel_image_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="发现美国好东西"
+                        android:textColor="#fff"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_travel_image_context"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_travel_image_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="资深老师解析，互动发红包"
+                        android:textColor="#fff" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_travel_image_context"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/main_travle_online_play" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="212dp"
+                        android:layout_height="149dp"
+                        android:src="@mipmap/main_travle_online_pic2" />
+
+                    <TextView
+                        android:id="@+id/tv_travel_image2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="SPG首次直播"
+                        android:textColor="#fff"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_travel_image2_context"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_travel_image2_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="北京长安W酒店，耀动帝都"
+                        android:textColor="#fff" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_travel_image2_context"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/main_travle_online_play" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
         </RelativeLayout>
+
     </ScrollView>
 
     <include
